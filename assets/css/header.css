@@ -1,0 +1,106 @@
+
+#headerContainer {
+  position: relative;
+  display: block;
+  margin: 0 100px;
+  top: -10px; /* cover natural gap on top*/
+  height: 100px;
+}
+
+@media (max-width: 768px) {
+  #headerContainer {
+      margin: 0 0;
+  }
+}
+
+#navBar {
+  position: relative;
+  display: inline-block;
+  background-color: #000;
+  border-radius: 10px;
+  height: 100px;
+  width: calc(100% - 110px);
+  overflow: auto;
+}
+
+#navBar::-webkit-scrollbar {
+  width: 0px;
+}
+
+#navDropDownIcon {
+  width: 50px;  
+  height: 50px; 
+  padding: 10px;
+  margin: 15px 15px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;  
+  align-items: center;
+}
+
+#navDropDownIcon div{
+  width: 100%;  
+  height: 5px;  
+  background-color: #ddd;  
+}
+
+#navDropDownIcon:hover {
+  cursor: pointer;
+  background-color: #ddd;
+}
+
+#navDropDownIcon:hover div{
+  height: 7px;  
+  background-color: #000;  
+}
+
+#navBar p {
+  position: relative;
+  margin: 0;
+  width: fit-content;
+  top: -75px;
+  left: calc(50% - 35px);
+  color: #eee;
+  user-select: none;
+  font-family: '04b03', cursive;
+  font-size: 50px;
+}
+
+#logoBox {
+  position: relative;
+  display: inline-block;
+  background-color: #000;
+  border-radius: 10px;
+  height: 100px;
+  width: 100px;
+}
+
+#logoBox img {
+  position: relative;
+  display: block;
+  transform: translate(-50%, -50%);
+  margin: 0 0;
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  width: 75px;
+  height: 75px;
+}
+
+#logoBox img:hover {
+  animation-name: logo-jiggle;
+  animation-duration: 0.5s; 
+  animation-iteration-count: infinite; 
+}
+
+@keyframes logo-jiggle {
+  
+  20%, 60% { 
+    transform: rotate(-1deg) translate(-50%, -50%);
+  }
+
+  40%, 80% { 
+    transform: rotate(1deg) translate(-50%, -50%);
+  }
+}
