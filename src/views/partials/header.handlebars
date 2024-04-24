@@ -14,15 +14,35 @@
     <div id="headerContainer">
         <div id="navBar">
             <div id="navDropDownIcon">
-                <div></div>
-                <div></div>
-                <div></div>
-                {{!-- TO-DO: Fill in navBar elements --}}
+                <div></div> {{!-- This div element becomes a bar in the dropDownIcon  --}}
+                <div></div> {{!-- This div element becomes a bar in the dropDownIcon  --}}
+                <div></div> {{!-- This div element becomes a bar in the dropDownIcon  --}}
             </div>
-            <p id="headerMainText">
+            <h1 id="headerMainText">
                 LobDev
-                {{!-- TO-DO: Assign font to header text --}}
-            </p>
+            </h1>
+            <div id="navDropDown">
+                <div class="nav-dropdown-item">
+                    <a href="/">
+                        <p>Home</p>
+                    </a>
+                </div>
+                <div class="nav-dropdown-item">
+                    <a href="/">
+                        <p>Contact</p>
+                    </a>
+                </div>
+                <div class="nav-dropdown-item">
+                    <a href="/">
+                        <p>Course Work</p>
+                    </a>
+                </div>
+                <div class="nav-dropdown-item">
+                    <a href="/">
+                        <p>Projects</p>
+                    </a>
+                </div>
+            </div>
         </div>
         <div id="logoBox">
             <a href="/">
@@ -30,5 +50,7 @@
             </a>
         </div>
     </div>
+
+    <script src="/assets/js/header.js"></script>
 </body>
 </html>
