@@ -1,97 +1,66 @@
-
-#headerContainer {
-  position: relative;
-  display: block;
-  margin: 0 200px;
-  top: -10px; /* cover natural gap on top*/
-  height: 100px;
+#header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 200px;
+    top: -10px; /* cover natural gap on top*/
+    height: 100px;
 }
 
 @media (max-width: 1024px) {
-  #headerContainer {
+  #header {
     margin: 0 100px;
   }
 }
 
 @media (max-width: 768px) {
-  #headerContainer {
+  #header {
     margin: 0 0;
   }
 }
 
-@media (max-width: 450px) {
-  #headerContainer {
+@media (max-width: 650px) {
+  #header {
     height: 80px;
   }
 }
 
-#navBar {
-  position: relative;
-  display: inline-block;
-  background-color: #000;
-  border-radius: 10px;
-  height: 100%;
-  width: calc(100% - 110px);
-  overflow-y: visible;
-}
-
-@media (max-width: 450px) {
-  #navBar {
-    width: calc(100% - 90px);
-  }
-}
-
-#navBar::-webkit-scrollbar {
-  width: 0px;
-}
-
-#navBar h1 {
-  position: relative;
-  width: fit-content;
-  margin: 0;
-  top: -70px;
-  left: calc(50% - 35px);
-  color: #eee;
-  user-select: none;
-  font-family: '04b03', cursive;
-  font-size: 50px;
-  font-weight: lighter;
-}
-
-@media (max-width: 450px) {
-  #navBar h1 {
-    top: -55px;
-    margin: 0;
-    font-size: 40px;
-  }
+#navBar{
+    flex-grow: 1;
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #000;
+    border-radius: 10px;
 }
 
 #navDropDownIcon {
-  cursor: pointer;
-  width: 50px;  
-  height: 50px; 
-  padding: 10px;
-  margin: 15px 15px;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;  
-  align-items: center;
+    width: 50px;  
+    height: 50px; 
+    padding: 10px;
+    margin: 15px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;  
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-#navDropDownIcon div{
-  width: 100%;  
-  height: 5px;  
-  background-color: #ddd;  
-}
-
-@media (max-width: 450px) {
+@media (max-width: 650px) {
   #navDropDownIcon {
     width: 40px;  
     height: 40px; 
     padding: 10px;
     margin: 10px 10px;
   }
+}
+
+#navDropDownIcon div{
+    width: 100%;  
+    height: 5px;  
+    background-color: #ddd;  
 }
 
 #navDropDownIcon:hover, #navDropDownIcon.active {
@@ -102,26 +71,46 @@
   background-color: #000;  
 }
 
-#navDropDown {
-  position: absolute;
-  display: none;
-  top: 100px;
-  margin-top:4px;
-  width: 250px;
-  padding: 10px;
-  height: fit-content;
-  background-color: #000;
-  border-radius: 10px;
+#navBar h1 {
+    position: relative;
+    width: fit-content;
+    display: block;
+    flex-grow: 1;
+    color: #eee;
+    user-select: none;
+    font-family: '04b03', cursive;
+    font-size: 50px;
+    font-weight: lighter;
+    text-align: center;
+    line-height: 1;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 650px) {
+  #navBar h1 {
+    font-size: 40px;
+  }
+}
+
+#navDropDown {
+    position: absolute;
+    display: none;
+    top: 100px;
+    margin-top:4px;
+    width: 250px;
+    padding: 10px;
+    height: fit-content;
+    background-color: #000;
+    border-radius: 10px;
+}
+
+@media (max-width: 650px) {
   #navDropDown {
     top: 80px;
   }
 }
 
 #navDropDown.show {
-  display: block;
+    display: block;
 }
 
 .nav-dropdown-item {
@@ -168,47 +157,43 @@
 }
 
 #logoBox {
-  position: relative;
-  display: inline-block;
-  background-color: #000;
-  border-radius: 10px;
-  height: 100px;
-  width: 100px;
-  top: -37.5px;
+    position: relative;
+    display: block;
+    height: 100px;
+    width: 100px;
+    margin-left: 4px;
+    background-color: #000;
+    border-radius: 10px;
 }
-
 
 #logoBox img {
-  position: relative;
-  display: block;
-  transform: translate(-50%, -50%);
-  margin: 0 0;
-  top: 50%;
-  left: 50%;
-  border-radius: 10px;
-  width: 75px;
-  height: 75px;
+    position: relative;
+    display: block;
+    width: 75px;
+    height: 75px;
+    margin: 0 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
 }
 
-@media (max-width: 450px) {
+#logoBox img:hover {
+  animation-name: logo-jiggle;
+  animation-duration: 0.5s; 
+  animation-iteration-count: infinite; 
+}
+
+@media (max-width: 650px) {
   #logoBox {
     height: 80px;
     width: 80px;
-    top: -30px;
   }
 
   #logoBox img {
     height: 60px;
     width: 60px;
   }
-}
-
-
-
-#logoBox img:hover {
-  animation-name: logo-jiggle;
-  animation-duration: 0.5s; 
-  animation-iteration-count: infinite; 
 }
 
 @keyframes logo-jiggle {
