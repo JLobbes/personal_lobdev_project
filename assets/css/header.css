@@ -1,31 +1,34 @@
+html {
+    margin: 0 200px;
+}
+
+@media (max-width: 1024px) {
+    html {
+        margin: 0 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        margin: 0 0;
+    }
+}
+
 #header {
     position: relative;
     display: flex;
     justify-content: space-between;
-    margin: 0 200px;
-    top: -10px; /* cover natural gap on top*/
+    top: -8px; /* cover natural gap on top*/
     height: 100px;
 }
 
-@media (max-width: 1024px) {
-  #header {
-    margin: 0 100px;
-  }
-}
-
-@media (max-width: 768px) {
-  #header {
-    margin: 0 0;
-  }
-}
-
 @media (max-width: 650px) {
-  #header {
-    height: 80px;
-  }
+    #header {
+        height: 80px;
+    }
 }
 
-#navBar{
+#navBar {
     flex-grow: 1;
     position: relative;
     height: 100%;
@@ -36,39 +39,39 @@
 }
 
 #navDropDownIcon {
-    width: 50px;  
-    height: 50px; 
+    width: 50px;
+    height: 50px;
     padding: 10px;
     margin: 15px 15px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;  
+    justify-content: space-around;
     align-items: center;
     border-radius: 5px;
     cursor: pointer;
 }
 
 @media (max-width: 650px) {
-  #navDropDownIcon {
-    width: 40px;  
-    height: 40px; 
-    padding: 10px;
-    margin: 10px 10px;
-  }
+    #navDropDownIcon {
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        margin: 10px 10px;
+    }
 }
 
-#navDropDownIcon div{
-    width: 100%;  
-    height: 5px;  
-    background-color: #ddd;  
+#navDropDownIcon div {
+    width: 100%;
+    height: 5px;
+    background-color: #ddd;
 }
 
 #navDropDownIcon:hover, #navDropDownIcon.active {
-  background-color: #ddd;
+    background-color: #ddd;
 }
 
-#navDropDownIcon:hover div, #navDropDownIcon.active div{
-  background-color: #000;  
+#navDropDownIcon:hover div, #navDropDownIcon.active div {
+    background-color: #000;
 }
 
 #navBar h1 {
@@ -86,16 +89,16 @@
 }
 
 @media (max-width: 650px) {
-  #navBar h1 {
-    font-size: 40px;
-  }
+    #navBar h1 {
+        font-size: 40px;
+    }
 }
 
 #navDropDown {
     position: absolute;
     display: none;
     top: 100px;
-    margin-top:4px;
+    margin-top: 4px;
     width: 250px;
     padding: 10px;
     height: fit-content;
@@ -104,9 +107,9 @@
 }
 
 @media (max-width: 650px) {
-  #navDropDown {
-    top: 80px;
-  }
+    #navDropDown {
+        top: 80px;
+    }
 }
 
 #navDropDown.show {
@@ -114,46 +117,47 @@
 }
 
 .nav-dropdown-item {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 50px;
-  margin-bottom: 7px;
-  background-color: #eee;
-  border-radius: 10px;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 7px;
+    background-color: #eee;
+    border-radius: 10px;
 }
 
 .nav-dropdown-item:last-child {
-  margin-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 .nav-dropdown-item a {
-  width: 100%;
-  text-decoration: none;
+    width: 100%;
+    text-decoration: none;
 }
 
 .nav-dropdown-item p {
-  position: relative;
-  display: block;
-  width: 100%;
-  margin: 0;
-  top: calc(50%);
-  transform: translate(0, -50%);
-  text-align: left;
-  text-indent: 10%;
-  color: #111;
-  user-select: none;
-  font-family: '04b03', cursive;
-  font-size: 30px;
-  font-weight: lighter; 
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0;
+    top: calc(50%);
+    transform: translate(0, -50%);
+    text-align: left;
+    text-indent: 10%;
+    color: #111;
+    user-select: none;
+    font-family: '04b03', cursive;
+    font-size: 30px;
+    font-weight: lighter;
 }
 
 .nav-dropdown-item:hover {
-  background-color: #000;
-  cursor: pointer;
+    background-color: #000;
+    cursor: pointer;
 }
-.nav-dropdown-item:hover p{
-  color: #eee;
+
+.nav-dropdown-item:hover p {
+    color: #eee;
 }
 
 #logoBox {
@@ -179,30 +183,32 @@
 }
 
 #logoBox img:hover {
-  animation-name: logo-jiggle;
-  animation-duration: 0.5s; 
-  animation-iteration-count: infinite; 
+    animation-name: logo-jiggle;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
 }
 
 @media (max-width: 650px) {
-  #logoBox {
-    height: 80px;
-    width: 80px;
-  }
+    #logoBox {
+        height: 80px;
+        width: 80px;
+    }
 
-  #logoBox img {
-    height: 60px;
-    width: 60px;
-  }
+    #logoBox img {
+        height: 60px;
+        width: 60px;
+    }
 }
 
 @keyframes logo-jiggle {
-  
-  20%, 60% { 
-    transform: rotate(-1deg) translate(-50%, -50%);
-  }
 
-  40%, 80% { 
-    transform: rotate(1deg) translate(-50%, -50%);
-  }
+    20%,
+    60% {
+        transform: rotate(-1deg) translate(-50%, -50%);
+    }
+
+    40%,
+    80% {
+        transform: rotate(1deg) translate(-50%, -50%);
+    }
 }

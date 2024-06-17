@@ -1,0 +1,129 @@
+footer {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    bottom: 0; 
+    width: calc(100% - 400px);
+    height: 50px;
+    transition: height 0.5s ease;
+    background-color: black;
+    border-radius: 10px;
+}
+
+footer.show {
+    height: 200px;
+}
+
+@media (max-width: 1024px) {
+    footer {
+        width: calc(100% - 200px);
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        width: calc(100% - 15px);
+    }
+}
+
+#toggleFooterButton {
+    position: relative;
+    width: 30px; 
+    height: 30px; 
+    margin: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#toggleFooterButton:hover, #toggleFooterButton.active {
+    background-color: #ddd;
+}
+
+.arrow-bar {
+    position: absolute;
+    top: 10%;
+    width: 50%; 
+    height: 5px; 
+    background-color: #ddd; 
+}
+
+#toggleFooterButton:hover .arrow-bar {
+    background-color: #000;
+}
+
+#toggleFooterButton.active .arrow-bar {
+    top: 60%;
+    background-color: #000;
+}
+
+.arrow-bar:first-child {
+    left: 0; 
+    transform: rotate(225deg); 
+    transform-origin: bottom right; 
+}
+
+#toggleFooterButton.active .arrow-bar:first-child {
+    transform: rotate(45deg); 
+}
+
+.arrow-bar:last-child {
+    right: 0; 
+    transform: rotate(-225deg); 
+    transform-origin: bottom left; 
+}
+
+#toggleFooterButton.active .arrow-bar:last-child {
+    transform: rotate(-45deg); 
+}
+
+#footerContent {
+    display: none;
+}
+
+#footerContent.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: top;
+    width: 100%;
+    height: 150px;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-function-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    margin: 10px 5px;
+    background-color: #000;
+}
+
+.footer-function-button img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.footer-function-button img.button-active {
+    display: none;
+}
+
+.footer-function-button:hover img.button-active,
+.footer-function-button.active img.button-active {
+    display: block;
+}
+
+.footer-function-button:hover img.button-primary,
+.footer-function-button.active img.button-primary {
+    display: none;
+}
